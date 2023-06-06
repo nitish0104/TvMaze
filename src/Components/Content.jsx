@@ -3,7 +3,9 @@ import React from "react";
 const Content = ({ show }) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <img className="w-full" src={show.image.medium} alt={show.name} />
+      <a href={show.url}>
+        <img className="w-full" src={show.image.medium} alt={show.name} />
+      </a>
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{show.name}</div>
         <p className="text-gray-700 text-base">{show.summary}</p>
