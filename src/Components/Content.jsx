@@ -32,7 +32,7 @@ const Content = ({ show }) => {
           {show.genres.map((genre, index) => (
             <span
               key={index}
-              className="inline-block bg-gray-500 rounded-full px-3 py-1 text-sm font-semibold text-gray-50 "
+              className="inline-block bg-gray-500 rounded-full px-3 py-1 text-sm font-thin text-gray-50 "
             >
               {genre}
             </span>
@@ -40,7 +40,7 @@ const Content = ({ show }) => {
         </div>
         <div className="flex items-center justify-center my-2">
           <Link
-            className="px-4 py-1 rounded-md   bg-red-500 text-black"
+            className="px-4 py-1 rounded-md   bg-yellow-300  text-black hover:font-semibold"
             to={`/shows/${show.id}`}
           >
             Show Summary

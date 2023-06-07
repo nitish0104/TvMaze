@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Layout from "./Layout";
+import { MdOutlineArrowBack } from "react-icons/md";
 
 const Summary = () => {
   const { id } = useParams();
@@ -17,7 +18,12 @@ const Summary = () => {
   return (
     <div>
       <Layout>
-        <section className="p-6 bg-gray-800  text-center">
+        <section className="p-6 bg-gray-800  text-center overflow-hidden">
+          <div className="top-3 left-3">
+            <Link to="/">
+              <MdOutlineArrowBack className="font-bold  lg:font-extrabold lg:text-2xl text-xl"></MdOutlineArrowBack>
+            </Link>
+          </div>
           <div className="flex justify-center items-center">
             <div className="container  h-screen overflow-hidden gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5 flex  justify-center items-center">
               <div className="w-[40%] px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-gray-900">
